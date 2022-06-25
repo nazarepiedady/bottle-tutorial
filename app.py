@@ -9,4 +9,4 @@ def hello():
     return 'Hello World!'
 
 
-run(host='localhost', port=8080, debug=True)
+run(app, host='localhost', port=8080, debug=True)
