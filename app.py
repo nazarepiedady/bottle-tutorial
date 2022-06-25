@@ -9,6 +9,7 @@ def hello():
     return 'Hello World!'
 
 
+@app.route('/')
 @app.route('/hello/<name>')
 def greet(name='Stranger'):
     return template('Hello {{name}}, how are you?', name=name)
