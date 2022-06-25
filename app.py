@@ -19,6 +19,9 @@ def greet(name='Stranger'):
 def show_wiki_page(pagename):
     pass
 
+@app.route('/<action>/<user>')
+def user_api(action, user):
+    pass
 
 
 run(app, host='localhost', port=8080, debug=True)
