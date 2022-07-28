@@ -48,5 +48,14 @@ def login():
         </form>
     '''
 
+@post('/login')
+def do_login():
+    username = request.forms.get('username')
+    password = request.forms.get('password')
+    if check_login(username, password):
+        return '<p>Your login information was correct.</p>'
+    else:
+        return '<p>Login failed.</p>'
+
 
 run(app, host='localhost', port=8080, debug=True)
