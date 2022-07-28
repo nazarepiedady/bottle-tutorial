@@ -23,5 +23,9 @@ def show_wiki_page(pagename):
 def user_api(action, user):
     pass
 
+@app.route('/object/<id:int>')
+def callback(id):
+    assert isinstance(id, int)
+
 
 run(app, host='localhost', port=8080, debug=True)
