@@ -27,5 +27,9 @@ def user_api(action, user):
 def callback(id):
     assert isinstance(id, int)
 
+@app.route('/show/<name:re:[a-z]+>')
+def callback(name):
+    assert name.isalpha()
+
 
 run(app, host='localhost', port=8080, debug=True)
