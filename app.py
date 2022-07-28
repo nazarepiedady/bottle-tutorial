@@ -31,5 +31,9 @@ def callback(id):
 def callback(name):
     assert name.isalpha()
 
+@app.route('/static/<path:path>')
+def callback(path):
+    return static_file(path, ...)
+
 
 run(app, host='localhost', port=8080, debug=True)
