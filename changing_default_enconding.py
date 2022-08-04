@@ -7,4 +7,4 @@ def get_iso():
 	return u'This will be sent with ISO-8859-15 enconding.'
 
 
-run(host=localhost, port=8080, debug=True)
+run(host='localhost', port=8080, debug=True)
