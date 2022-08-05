@@ -8,4 +8,11 @@ def send_wiki_page(page):
 	return f'Tu estás na página {page}'
 
 
+@route('/')
+def send_home_page():
+	response.set_header('set-cookie', 'greeting=welcome')
+	response.add_header('set-cookie', 'sweeties=cakes')
+	return 'Welcome to Home Page'
+
+
 run(**DEVSERVER_CONFIG)
