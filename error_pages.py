@@ -1,3 +1,4 @@
+from config import DEVSERVER_CONFIG
 from bottle import error, run, route
 
 
@@ -22,4 +23,4 @@ def home_page():
 	'''
 
 
-run(host='localhost', port=8080, debug=True)
+run(**DEVSERVER_CONFIG)
