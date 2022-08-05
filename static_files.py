@@ -8,4 +8,9 @@ def send_image(filename):
 	return static_file(filename, root='./static/images', mimetype='image/png')
 
 
+@route('/static/<filename:path>')
+def send_static(filename):
+	return static_file(filename, root='./static/images')
+
+
 run(host='localhost', port=8080, debug=True)
