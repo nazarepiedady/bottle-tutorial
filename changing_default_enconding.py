@@ -1,3 +1,4 @@
+from config import DEVSERVER_CONFIG
 from bottle import run, route, response
 
 
@@ -13,4 +14,4 @@ def get_latin():
 	return u'ISO-8859-15 is also known as latin9.'
 
 
-run(host='localhost', port=8080, debug=True)
+run(**DEVSERVER_CONFIG)
