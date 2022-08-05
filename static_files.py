@@ -13,4 +13,9 @@ def send_static(filename):
 	return static_file(filename, root='./static/images')
 
 
+@route('/download/<filename:path>')
+def download_file(filename):
+	return static_file(filename, root='./static/images', download=filename)
+
+
 run(host='localhost', port=8080, debug=True)
